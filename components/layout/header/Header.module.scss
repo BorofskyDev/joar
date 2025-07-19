@@ -1,0 +1,20 @@
+@use '@/styles/abstracts/mixins' as *;
+@use '@/styles/abstracts/functions' as *;
+
+.header {
+    max-width: var(--w-page-max);
+    margin: 0 auto;
+    padding: var(--p-y-lg) var(--p-x-page);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+    & .right {
+     
+        @include breakpoint(lg) {
+            display: none;
+        }
+    }
+}

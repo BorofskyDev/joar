@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { playfair, atkinsonNext, atkinsonMono } from './fonts'
 import '@/styles/globals.scss'
+import { Providers } from './providers'
+import { Header } from '@/components/layout'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,7 +19,10 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${atkinsonNext.variable} ${atkinsonMono.variable}`}
       >
-        {children}
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
       </body>
     </html>
   )

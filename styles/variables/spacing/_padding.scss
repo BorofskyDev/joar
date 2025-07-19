@@ -1,0 +1,9 @@
+@use '@/styles/abstracts/functions' as *;
+@use '@/styles/abstracts/mixins' as *;
+
+:root {
+   --p-x-page: #{px-to-rem(44)};
+   
+   --p-y-lg: #{px-to-rem(24)};
+
+}

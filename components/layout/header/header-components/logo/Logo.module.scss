@@ -1,0 +1,29 @@
+@use '@/styles/abstracts/mixins' as *;
+@use '@/styles/abstracts/functions' as *;
+
+.logo {
+  font-family: var(--font-playfair);
+  font-size: var(--fs-600);
+  font-weight: var(--fw-black);
+  line-height: var(--lh-400);
+  transition: var(--transition-main);
+
+  &:hover,
+  &:focus-visible {
+    text-shadow:  #{px-to-ch(1)} #{px-to-ch(1)} 0 var(--sky-400);
+    transform: scale(1.05) translateY(-#{px-to-ch(1)});
+}
+
+  &.mobile {
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+
+  &.desktop {
+    display: none;
+    @include breakpoint(lg) {
+      display: block;
+    }
+  }
+}

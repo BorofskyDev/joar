@@ -1,0 +1,28 @@
+@use '@/styles/abstracts/mixins' as *;
+@use '@/styles/abstracts/functions' as *;
+
+.text {
+  &__body {
+    @include text-style(1);
+  }
+
+  &__body-sm {
+    @include text-style(2);
+  }
+
+  &__body-lg {
+    @include text-style(3);
+  }
+
+  &__label {
+    @include text-style(4);
+  }
+
+  &__label-sm {
+    @include text-style(5);
+  }
+
+  &__label-lg {
+    @include text-style(6);
+  }
+}

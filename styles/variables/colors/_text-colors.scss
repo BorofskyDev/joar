@@ -1,7 +1,10 @@
 :root {
     --text-main: var(--blue-950);
+    --text-secondary: var(--steel-700);
+    --text-color: var(--blue-500);
 }
 
 [data-theme='dark'] {
-    --text-main: var(--emerald-50);
+    --text-main: var(--sky-50);
+    --text-color: var(--sky-200);
 }

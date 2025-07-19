@@ -1,0 +1,6 @@
+@use '@/styles/abstracts/functions' as *;
+
+:root {
+    --w-para-max: #{px-to-ch(620)};
+    --w-page-max: #{px-to-ch(1900)};
+}
