@@ -1,0 +1,27 @@
+@use '@/styles/abstracts/functions' as *;
+@use '@/styles/abstracts/mixins' as *;
+
+:root {
+    --gap-el-xs: #{px-to-rem(16)};
+    --gap-el-sm: #{px-to-rem(24)};
+    --gap-el-md: #{px-to-rem(32)};
+    --gap-el-lg: #{px-to-rem(40)};
+    --gap-el-xl: #{px-to-rem(48)};
+
+    @include breakpoint(lg) {
+        --gap-el-xs: #{px-to-rem(20)};
+        --gap-el-sm: #{px-to-rem(28)};
+        --gap-el-md: #{px-to-rem(36)};
+        --gap-el-lg: #{px-to-rem(44)};
+        --gap-el-xl: #{px-to-rem(52)};
+    }
+
+    @include breakpoint(2xl) { 
+        --gap-el-xs: #{px-to-rem(24)};
+        --gap-el-sm: #{px-to-rem(32)};
+        --gap-el-md: #{px-to-rem(40)};
+        --gap-el-lg: #{px-to-rem(48)};
+        --gap-el-xl: #{px-to-rem(56)};
+    }
+}
+

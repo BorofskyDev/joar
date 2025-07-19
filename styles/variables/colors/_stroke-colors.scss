@@ -1,0 +1,7 @@
+:root {
+    --stroke-ruby: var(--ruby-600);
+}
+
+[data-theme='dark'] {
+    --stroke-ruby: var(--ruby-400);
+}

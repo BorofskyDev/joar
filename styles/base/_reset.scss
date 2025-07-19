@@ -47,7 +47,7 @@ body {
   font-size: var(--fs-300);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // transition: var(--transition-main);
+  transition: background-color 0.3s ease-in-out;
 }
 
 ul,

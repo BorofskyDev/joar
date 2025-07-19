@@ -21,6 +21,11 @@ export function ToggleTheme() {
       <Icon
         className={styles.icon}
         path={icons[theme === 'dark' ? 'sun' : 'moon']}
+        title={
+          theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'
+        }
+        role='img'
+        description={theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
       />
       <PText variant='label-sm' className={styles.label}>
         {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}

@@ -1,10 +1,15 @@
 :root {
-    --text-main: var(--blue-950);
-    --text-secondary: var(--steel-700);
-    --text-color: var(--blue-500);
+  --text-main: var(--blue-950);
+  --text-secondary: var(--steel-700);
+  --text-color: var(--blue-500);
+  --text-link: var(--blue-700);
+  --text-link-hover: var(--blue-900);
 }
 
 [data-theme='dark'] {
-    --text-main: var(--sky-50);
-    --text-color: var(--sky-200);
+  --text-main: var(--sky-50);
+  --text-secondary: var(--steel-200);
+  --text-color: var(--sky-200);
+  --text-link: var(--sky-300);
+  --text-link-hover: var(--sky-100);
 }

@@ -1,0 +1,30 @@
+@use '@/styles/abstracts/functions' as *;
+@use './breakpoint' as *;
+@use './flex' as *;
+
+@mixin icon-btn {
+  @include flex-center(row, var(--gap-el-xs));
+
+  & .icon {
+    width: #{px-to-rem(24)};
+    height: #{px-to-rem(24)};
+    color: var(--text-main);
+
+    @include breakpoint(md) {
+      width: #{px-to-rem(32)};
+      height: #{px-to-rem(32)};
+    }
+
+    @include breakpoint(lg) {
+      width: #{px-to-rem(64)};
+      height: #{px-to-rem(64)};
+    }
+  }
+
+  & .label {
+    display: none;
+    @include breakpoint(lg) {
+      display: block;
+    }
+  }
+}
