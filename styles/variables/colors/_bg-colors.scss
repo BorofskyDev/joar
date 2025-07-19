@@ -1,0 +1,7 @@
+:root {
+  --bg-primary: var(--stone-50);
+}
+
+[data-theme='dark'] {
+  --bg-primary: var(--steel-950);
+}

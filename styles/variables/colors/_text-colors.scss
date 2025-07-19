@@ -1,0 +1,7 @@
+:root {
+    --text-main: var(--blue-950);
+}
+
+[data-theme='dark'] {
+    --text-main: var(--emerald-50);
+}
