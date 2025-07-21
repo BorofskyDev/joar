@@ -1,0 +1,7 @@
+:root {
+    --border-main: var(--blue-600);
+}
+
+[data-theme='dark'] {
+    --border-main: var(--emerald-400);
+}

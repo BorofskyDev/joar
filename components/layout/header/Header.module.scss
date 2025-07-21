@@ -2,22 +2,53 @@
 @use '@/styles/abstracts/functions' as *;
 
 .header {
-    max-width: var(--w-page-max);
-    margin: 0 auto;
-    padding: var(--p-y-lg) var(--p-x-page);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  max-width: var(--w-page-max);
+  margin: 0 auto;
+  padding: var(--p-y-lg) var(--p-x-page);
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-    & .left {
-        @include flex-center(row, var(--gap-el-md));
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    & .right {
-     
-        @include breakpoint(lg) {
-            display: none;
-        }
+  @include breakpoint(lg) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: var(--gap-el-sm);
+  }
+
+  & .bottom {
+    @include breakpoint(lg) {
+      grid-column: 1 / -1;
+      place-self: center;
     }
+  }
+
+  & .left {
+    @include flex-center(row, var(--gap-el-md));
+
+    @include breakpoint(lg) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      justify-self: start;
+    }
+  }
+
+  & .right {
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+
+  & .logo {
+    @include breakpoint(lg) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      justify-self: end;
+    }
+  }
 }

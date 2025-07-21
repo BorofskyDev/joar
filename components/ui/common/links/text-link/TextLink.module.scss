@@ -1,0 +1,7 @@
+@use '@/styles/abstracts/mixins' as *;
+@use '@/styles/abstracts/functions' as *;
+
+.textLink {
+    @include nav-link;
+    
+}

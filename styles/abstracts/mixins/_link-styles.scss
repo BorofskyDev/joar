@@ -1,0 +1,54 @@
+@use '@/styles/abstracts/functions' as *;
+
+@mixin link-styles($size: var(--fs-300), $height: var(--lh-300)) {
+  position: relative;
+  max-width: fit-content;
+  font-family: var(--font-atkinson-mono);
+  color: var(--text-link);
+  font-weight: var(--fw-bold);
+  transition: var(--transition-fast);
+  font-size: $size;
+  line-height: $height;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--text-link-hover);
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: #{px-to-rem(1)};
+    background-color: var(--text-link);
+    transition: var(--transition-fast);
+  }
+
+  &::before {
+    bottom: -#{px-to-rem(1)};
+    left: 0;
+  }
+
+  &::after {
+    top: -#{px-to-rem(1)};
+    right: -150%;
+    opacity: 0;
+  }
+
+  &:hover::before,
+  &:focus-visible::before {
+    background-color: var(--stroke-ruby);
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    background-color: var(--stroke-ruby);
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@mixin nav-link {
+  @include link-styles(var(--fs-400), var(--lh-400));
+}

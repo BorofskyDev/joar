@@ -1,0 +1,15 @@
+@use '@/styles/abstracts/mixins' as *;
+@use '@/styles/abstracts/functions' as *;
+
+
+.desktopNav {
+    display: none;
+    @include breakpoint(lg) {
+        height: 100%;
+        width: 100%;
+        @include flex-center(row, var(--gap-el-sm));
+        justify-content: space-between;
+        padding-bottom: var(--p-y-lg);
+        border-bottom: var(--border-1);
+    }
+}

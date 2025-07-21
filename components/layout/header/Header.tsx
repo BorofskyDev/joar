@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import styles from './Header.module.scss'
 import {
+  DesktopNav,
   HamburgerBtn,
   Logo,
   SearchButton,
@@ -27,10 +28,11 @@ export function Header() {
         <SearchButton />
         <ToggleTheme />
       </div>
-      <Logo />
+      <Logo className={styles.logo} />
       <div className={styles.right}>
         <HamburgerBtn isOpen={menuOpen} onClick={handleToggleMenu} />
       </div>
+      <DesktopNav className={styles.bottom} />
     </header>
   )
 }

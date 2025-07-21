@@ -1,3 +1,4 @@
+export * from './desktop-nav/DesktopNav'
 export * from './hamburger-btn/HamburgerBtn'
 export * from './logo/Logo'
 export * from './search-button/SearchButton'
