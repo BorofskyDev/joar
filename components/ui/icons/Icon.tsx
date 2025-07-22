@@ -1,3 +1,6 @@
+'use client'
+import { useId } from "react"
+
 export interface IconProps {
   path: string
   size?: number
@@ -20,12 +23,10 @@ export function Icon({
   strokeColor,
   backgroundColor,
 }: IconProps) {
-  const titleId = title
-    ? `icon-title-${Math.random().toString(36).slice(2, 11)}`
-    : undefined
-  const descId = description
-    ? `icon-desc-${Math.random().toString(36).slice(2, 11)}`
-    : undefined
+  const reactId = useId()
+
+  const titleId = title ? `icon-title-${reactId}` : undefined
+  const descId = description ? `icon-desc-${reactId}` : undefined
 
   const ariaLabelledBy =
     [titleId, descId].filter(Boolean).join(' ') || undefined

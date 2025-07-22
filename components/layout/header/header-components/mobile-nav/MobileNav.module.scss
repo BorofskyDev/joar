@@ -1,0 +1,19 @@
+@use '@/styles/abstracts/mixins' as *;
+@use '@/styles/abstracts/functions' as *;
+
+.mobileNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--bg-primary);
+  z-index: 9999;
+  overflow-y: auto;
+
+  & .links {
+    @include flex-center(column, var(--gap-el-md));
+    height: 100%;
+    width: 100%;
+  }
+}

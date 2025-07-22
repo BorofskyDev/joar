@@ -2,10 +2,32 @@
 @use '@/styles/abstracts/mixins' as *;
 
 :root {
-   --p-x-page: #{px-to-rem(44)};
-   
-   --p-y-sm: #{px-to-rem(16)};
-   --p-y-lg: #{px-to-rem(24)};
+  --p-x-page: #{px-to-rem(44)};
 
+  --p-y-sm: #{px-to-rem(16)};
+  --p-y-lg: #{px-to-rem(24)};
 
+  @include breakpoint(md) {
+    --p-x-page: #{px-to-rem(64)};
+    --p-y-sm: #{px-to-rem(20)};
+    --p-y-lg: #{px-to-rem(32)};
+  }
+
+  @include breakpoint(lg) {
+    --p-x-page: #{px-to-rem(80)};
+    --p-y-sm: #{px-to-rem(24)};
+    --p-y-lg: #{px-to-rem(40)};
+  }
+
+  @include breakpoint(xl) {
+    --p-x-page: #{px-to-rem(96)};
+    --p-y-sm: #{px-to-rem(28)};
+    --p-y-lg: #{px-to-rem(48)};
+  }
+
+  @include breakpoint(2xl) {
+    --p-x-page: #{px-to-rem(120)};
+    --p-y-sm: #{px-to-rem(28)};
+    --p-y-lg: #{px-to-rem(48)};
+  }
 }

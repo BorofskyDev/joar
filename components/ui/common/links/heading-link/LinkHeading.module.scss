@@ -1,0 +1,12 @@
+@use '@/styles/abstracts/mixins' as *;
+@use '@/styles/abstracts/functions' as *;
+
+.linkHeading {
+    @include link-heading(var(--text-link));
+    text-transform: capitalize;
+    font-size: var(--fs-700);
+
+    &:focus-visible, &:hover {
+        color: var(--text-link-hover);
+    }
+}

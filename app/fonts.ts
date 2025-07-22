@@ -15,6 +15,7 @@ export const playfair = localFont({
   variable: '--font-playfair',
 })
 
+
 export const atkinsonNext = localFont({
   src: [
     {

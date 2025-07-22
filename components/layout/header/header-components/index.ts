@@ -1,5 +1,6 @@
 export * from './desktop-nav/DesktopNav'
 export * from './hamburger-btn/HamburgerBtn'
 export * from './logo/Logo'
+export * from './mobile-nav/MobileNav'
 export * from './search-button/SearchButton'
 export * from './toggle-theme/ToggleTheme'

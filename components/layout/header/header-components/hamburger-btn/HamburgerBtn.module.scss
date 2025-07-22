@@ -4,7 +4,7 @@
 .hamburgerBtn {
     position: relative;
     @include flex-center(column, #{px-to-rem(8)});
-    z-index: 50;
+    z-index: 50000;
   
     & span {
       width: #{px-to-rem(32)};

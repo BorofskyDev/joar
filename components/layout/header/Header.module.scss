@@ -9,16 +9,18 @@
   max-width: var(--w-page-max);
   margin: 0 auto;
   padding: var(--p-y-lg) var(--p-x-page);
-
+  background-color: var(--bg-primary);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: var(--border-1);
 
   @include breakpoint(lg) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: var(--gap-el-sm);
+    border-bottom: none;
   }
 
   & .bottom {

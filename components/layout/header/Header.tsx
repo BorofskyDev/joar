@@ -7,6 +7,7 @@ import {
   DesktopNav,
   HamburgerBtn,
   Logo,
+  MobileNav,
   SearchButton,
   ToggleTheme,
 } from './header-components'
@@ -33,6 +34,15 @@ export function Header() {
         <HamburgerBtn isOpen={menuOpen} onClick={handleToggleMenu} />
       </div>
       <DesktopNav className={styles.bottom} />
+
+      <AnimatePresence>
+        {menuOpen && (
+          <MobileNav
+            onLinkClick={handleLinkClick}
+            className={styles.mobileNav}
+          />
+        )}
+      </AnimatePresence>
     </header>
   )
 }

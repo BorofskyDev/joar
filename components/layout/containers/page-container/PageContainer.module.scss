@@ -1,0 +1,7 @@
+@use '@/styles/abstracts/mixins' as *;
+@use '@/styles/abstracts/functions' as *;
+
+
+.pageContainer {
+    margin: var(--m-page-y) auto;
+}

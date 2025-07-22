@@ -1,0 +1,22 @@
+@use '@/styles/abstracts/functions' as *;
+@use '@/styles/abstracts/mixins' as *;
+
+:root {
+  --m-page-y: #{px-to-rem(32)};
+
+  @include breakpoint(md) {
+    --m-page-y: #{px-to-rem(48)};
+  }
+
+  @include breakpoint(lg) {
+    --m-page-y: #{px-to-rem(64)};
+  }
+
+  @include breakpoint(xl) {
+    --m-page-y: #{px-to-rem(80)};
+  }
+
+  @include breakpoint(2xl) {
+    --m-page-y: #{px-to-rem(96)};
+  }
+}

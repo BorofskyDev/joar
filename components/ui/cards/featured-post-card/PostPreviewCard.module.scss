@@ -1,0 +1,21 @@
+@use '@/styles/abstracts/mixins' as *;
+@use '@/styles/abstracts/functions' as *;
+
+.postPreviewCard {
+    padding: var(--p-y-lg) var(--p-x-page);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-el-md);
+
+    & .category {
+        text-transform: capitalize;
+    }
+
+    & .title {
+
+    }
+
+    & .summary {
+        
+    }
+}

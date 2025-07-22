@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={`${playfair.variable} ${atkinsonNext.variable} ${atkinsonMono.variable}`}
+        className={`${playfair.variable} ${atkinsonNext.variable} ${atkinsonMono.variable}  `}
       >
         <Providers>
           <Header />
