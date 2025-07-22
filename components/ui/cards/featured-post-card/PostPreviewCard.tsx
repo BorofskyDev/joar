@@ -51,19 +51,24 @@ export function PostPreviewCard({
       </LinkHeading>
       <PText className={styles.summary}>{summary}</PText>
       <div className={styles.meta}>
-        <TextLink href={author.link} className={styles.author}>
-          {author.name}
-        </TextLink>
-        <Image
-          width={40}
-          height={40}
-          src={author.image}
-          className={styles.authorImage}
-          layout='responsive'
-          objectFit='cover'
-          aria-hidden='true'
-          alt={author.name || ``}
-        />
+        <div className={styles.authorInfo}>
+          <div className={styles.authorImageWrapper}>
+          <Image
+            width={40}
+            height={40}
+            src={author.image}
+            className={styles.authorImage}
+            layout='responsive'
+            objectFit='cover'
+            aria-hidden='true'
+            alt={author.name || ``}
+          />
+
+          </div>
+          <TextLink href={author.link} className={styles.author}>
+            {author.name}
+          </TextLink>
+        </div>
         <PText variant='body-sm' className={styles.date}>
           {date}
         </PText>
