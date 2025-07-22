@@ -3,6 +3,7 @@
 @mixin link-styles($size: var(--fs-300), $height: var(--lh-300)) {
   position: relative;
   max-width: fit-content;
+  height: auto;
   font-family: var(--font-atkinson-mono);
   color: var(--text-link);
   font-weight: var(--fw-bold);

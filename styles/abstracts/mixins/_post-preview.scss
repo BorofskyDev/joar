@@ -1,0 +1,55 @@
+@use '@/styles/abstracts/functions' as *;
+@use './flex' as *;
+
+@mixin post-preview-basic {
+  padding: var(--p-y-lg) var(--p-x-page);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap-el-md);
+
+  & .category {
+    text-transform: capitalize;
+  }
+
+  & .title {
+  }
+
+  & .summary {
+  }
+
+  & .meta {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & .authorInfo {
+      @include flex-center(row, #{px-to-rem(16)});
+
+      & .authorImageWrapper {
+        width: #{px-to-rem(48)};
+        height: #{px-to-rem(48)};
+        overflow: hidden;
+
+        border-radius: 100%;
+
+        & .authorImage {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top;
+          transform: scale(1.5) translateY(#{px-to-rem(6)});
+        }
+      }
+
+      & .author {
+        font-size: var(--fs-200);
+      }
+    }
+    & .date {
+      display: inline-block;
+      margin-left: auto;
+      white-space: nowrap;
+    }
+  }
+}

@@ -16,4 +16,5 @@ export const splashData: PostPreviewCardProps = {
   },
   date: 'July 21, 2025',
   slug: '/blog/thoughts-on-religion-while-i-watch-my-father-die',
+  featured: true,
 }

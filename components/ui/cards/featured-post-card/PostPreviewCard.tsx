@@ -21,6 +21,7 @@ export interface PostPreviewCardProps {
   author: Author
   date: string
   slug: string
+  featured?: boolean
 }
 
 export function PostPreviewCard({
@@ -31,9 +32,12 @@ export function PostPreviewCard({
   author,
   date,
   slug,
+  featured,
 }: PostPreviewCardProps) {
   return (
-    <article className={styles.postPreviewCard}>
+    <article
+      className={`${styles.postPreviewCard} ${featured ? styles.featured : ''}`}
+    >
       <Image
         width={1690}
         height={960}
@@ -53,17 +57,16 @@ export function PostPreviewCard({
       <div className={styles.meta}>
         <div className={styles.authorInfo}>
           <div className={styles.authorImageWrapper}>
-          <Image
-            width={40}
-            height={40}
-            src={author.image}
-            className={styles.authorImage}
-            layout='responsive'
-            objectFit='cover'
-            aria-hidden='true'
-            alt={author.name || ``}
-          />
-
+            <Image
+              width={40}
+              height={40}
+              src={author.image}
+              className={styles.authorImage}
+              layout='responsive'
+              objectFit='cover'
+              aria-hidden='true'
+              alt={author.name || ``}
+            />
           </div>
           <TextLink href={author.link} className={styles.author}>
             {author.name}

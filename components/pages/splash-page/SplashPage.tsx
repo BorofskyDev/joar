@@ -1,7 +1,7 @@
 import { PostPreviewCard } from '@/components/ui'
 import { splashData } from './splashData'
-import styles from './SplashPage.module.scss'
 import { PageContainer } from '@/components/layout'
+import styles from './SplashPage.module.scss'
 
 export function SplashPage() {
     return ( 
