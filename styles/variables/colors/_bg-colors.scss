@@ -1,7 +1,9 @@
 :root {
   --bg-primary: var(--stone-50);
+  --bg-neutral: var(--neutral-300);
 }
 
 [data-theme='dark'] {
   --bg-primary: var(--steel-950);
+  --bg-neutral: var(--neutral-700);
 }

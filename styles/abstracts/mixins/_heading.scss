@@ -1,0 +1,25 @@
+@mixin heading($fs, $weight, $color, $style: normal) {
+  font-size: $fs;
+  font-weight: $weight;
+  color: $color;
+  font-style: $style;
+  text-transform: capitalize;
+}
+
+@mixin heading-style($level) {
+  @if $level == 1 {
+    @include heading(
+      var(--fs-900),
+      var(--fw-black),
+      var(--text-main),
+    );
+  }
+
+  @if $level == 2 {
+    @include heading (
+        var(--fs-700),
+        var(--fw-bold),
+        var(--text-main),
+    )
+  }
+}

@@ -2,11 +2,15 @@
 @use '@/styles/abstracts/functions' as *;
 
 .linkHeading {
-    @include link-heading(var(--text-link));
+  @include link-heading(var(--text-link));
+
+  & h1 {
     text-transform: capitalize;
     font-size: var(--fs-700);
+  }
 
-    &:focus-visible, &:hover {
-        color: var(--text-link-hover);
-    }
+  &:focus-visible,
+  &:hover {
+    color: var(--text-link-hover);
+  }
 }

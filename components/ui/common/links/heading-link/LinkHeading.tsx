@@ -10,7 +10,7 @@ interface LinkHeadingProps {
 export function LinkHeading({ children, href, className }: LinkHeadingProps) {
     return (
         <Link href={href} className={`${styles.linkHeading} ${className}`}>
-            {children}
+           <h1>{children}</h1>
         </Link>
     )
 }

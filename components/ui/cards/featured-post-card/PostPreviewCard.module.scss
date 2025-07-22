@@ -2,41 +2,40 @@
 @use '@/styles/abstracts/functions' as *;
 
 .postPreviewCard {
-@include post-preview-basic;
+  @include post-preview-basic;
 }
 
-
 .featured {
-   @include breakpoint(lg) {
+  @include breakpoint(lg) {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.2fr 1fr 1fr 0.2fr;
-    grid-template-areas: 
-    "category image"
-    "title image"
-    "summary image"
-    "meta image" ;
+    grid-template-areas:
+      'category image'
+      'title image'
+      'summary image'
+      'meta image';
 
     & .image {
-        grid-area: image;
-        place-self: center;
+      grid-area: image;
+      place-self: center;
     }
 
     & .category {
-        grid-area: category;
+      grid-area: category;
     }
 
     & .title {
-        grid-area: title;
+      grid-area: title;
     }
 
     & .summary {
-        grid-area: summary;
+      grid-area: summary;
     }
 
     & .meta {
-        grid-area: meta;
+      grid-area: meta;
     }
-   }
+  }
 }

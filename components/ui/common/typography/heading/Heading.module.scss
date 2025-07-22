@@ -1,0 +1,12 @@
+@use '@/styles/abstracts/mixins' as *;
+@use '@/styles/abstracts/functions' as *;
+
+.heading {
+    &--page {
+        @include heading-style(1);
+    }
+
+    &--section {
+        @include heading-style(2);
+    }
+}
