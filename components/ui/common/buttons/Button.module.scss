@@ -2,37 +2,15 @@
 @use '@/styles/abstracts/functions' as *;
 
 .button {
-  position: relative;
-  padding: var(--p-btn-lg);
-  border: var(--border-1);
-  font-family: var(--font-atkinson-mono);
-  color: var(--text-btn-primary);
-  font-size: var(--fs-400);
-  font-weight: var(--fw-bold);
-  text-transform: uppercase;
-  transition: var(--transition-main);
-  z-index: 1;
-
-  &:focus-visible,
-  &:hover {
-    color: var(--text-btn-primary-hover);
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: var(--bg-btn-primary);
-    z-index: -1;
-    transition: var(--transition-main);
-  }
-
-  &:hover::before,
-  &:focus-visible::before {
-    background-color: var(--bg-btn-primary-hover);
-    transform: rotateX(180deg);
+  &--primary {
+    @include button(
+      var(--p-btn-lg),
+      var(--text-btn-primary),
+      var(--fs-400),
+      uppercase,
+      var(--text-btn-primary-hover),
+      var(--bg-btn-primary),
+      var(--bg-btn-primary-hover)
+    );
   }
 }

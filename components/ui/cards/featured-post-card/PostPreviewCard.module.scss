@@ -39,3 +39,9 @@
     }
   }
 }
+
+.default {
+  @include breakpoint(md) {
+    max-width: #{px-to-rem(658)};
+  }
+}

@@ -15,6 +15,7 @@ interface Author {
 
 export interface PostPreviewCardProps {
   catHref: string
+  catName: string
   img: Image
   title: string
   summary: string
@@ -26,6 +27,7 @@ export interface PostPreviewCardProps {
 
 export function PostPreviewCard({
   catHref,
+  catName,
   img,
   title,
   summary,
@@ -36,7 +38,7 @@ export function PostPreviewCard({
 }: PostPreviewCardProps) {
   return (
     <article
-      className={`${styles.postPreviewCard} ${featured ? styles.featured : ''}`}
+      className={`${styles.postPreviewCard} ${featured ? styles.featured : styles.default}`}
     >
       <Image
         width={1690}
@@ -48,7 +50,7 @@ export function PostPreviewCard({
         className={styles.image}
       />
       <TextLink href={catHref} className={styles.category}>
-        {catHref.split('/').pop()}
+        {catName}
       </TextLink>
       <LinkHeading href={slug} className={styles.title}>
         {title}

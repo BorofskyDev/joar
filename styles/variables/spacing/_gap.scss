@@ -8,12 +8,15 @@
     --gap-el-lg: #{px-to-rem(40)};
     --gap-el-xl: #{px-to-rem(48)};
 
+    --gap-section: #{px-to-rem(64)};
+
     @include breakpoint(lg) {
         --gap-el-xs: #{px-to-rem(20)};
         --gap-el-sm: #{px-to-rem(28)};
         --gap-el-md: #{px-to-rem(36)};
         --gap-el-lg: #{px-to-rem(44)};
         --gap-el-xl: #{px-to-rem(52)};
+        --gap-section: #{px-to-rem(72)};
     }
 
     @include breakpoint(2xl) { 
@@ -22,6 +25,7 @@
         --gap-el-md: #{px-to-rem(40)};
         --gap-el-lg: #{px-to-rem(48)};
         --gap-el-xl: #{px-to-rem(56)};
+        --gap-section: #{px-to-rem(80)};
     }
 }
 

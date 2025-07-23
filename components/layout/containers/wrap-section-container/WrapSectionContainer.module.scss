@@ -1,0 +1,13 @@
+@use '@/styles/abstracts/mixins' as *;
+@use '@/styles/abstracts/functions' as *;
+
+.wrapSectionContainer {
+    @include flex-center(column, var(--gap-el-md));
+  & .wrapSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: var(--gap-el-md);
+  }
+}
