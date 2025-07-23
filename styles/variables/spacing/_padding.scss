@@ -7,16 +7,22 @@
   --p-y-sm: #{px-to-rem(16)};
   --p-y-lg: #{px-to-rem(24)};
 
+  --p-btn-lg: #{px-to-rem(8)} #{px-to-rem(18)};
+
   @include breakpoint(md) {
     --p-x-page: #{px-to-rem(64)};
     --p-y-sm: #{px-to-rem(20)};
     --p-y-lg: #{px-to-rem(32)};
+
+    --p-btn-lg: #{px-to-rem(10)} #{px-to-rem(20)};
   }
 
   @include breakpoint(lg) {
     --p-x-page: #{px-to-rem(80)};
     --p-y-sm: #{px-to-rem(24)};
     --p-y-lg: #{px-to-rem(40)};
+
+    --p-btn-lg: #{px-to-rem(12)} #{px-to-rem(24)};
   }
 
   @include breakpoint(xl) {

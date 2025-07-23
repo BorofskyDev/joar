@@ -1,4 +1,4 @@
-import { Heading, PText } from '@/components/ui'
+import { Button, Heading, PText, TextLink } from '@/components/ui'
 import styles from './AboutSection.module.scss'
 
 export function AboutSection() {
@@ -22,6 +22,8 @@ export function AboutSection() {
             rather us go quietly.
           </PText>
         </div>
-      </section>
+        <TextLink href='/about'>Read More About JoaR</TextLink>
+        <Button type='button' variant='primary'>Subscribe</Button>
+      </section> 
     )
 }

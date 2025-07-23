@@ -4,6 +4,8 @@
   --text-color: var(--blue-500);
   --text-link: var(--blue-700);
   --text-link-hover: var(--blue-900);
+  --text-btn-primary: var(--blue-700);
+  --text-btn-primary-hover: var(--blue-200);
 }
 
 [data-theme='dark'] {
@@ -12,4 +14,6 @@
   --text-color: var(--emerald-200);
   --text-link: var(--emerald-300);
   --text-link-hover: var(--emerald-100);
+  --text-btn-primary: var(--emerald-300);
+  --text-btn-primary-hover: var(--emerald-800);
 }

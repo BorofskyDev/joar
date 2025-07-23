@@ -1,9 +1,13 @@
 :root {
   --bg-primary: var(--stone-50);
   --bg-neutral: var(--neutral-300);
+  --bg-btn-primary: var(--steel-200);
+  --bg-btn-primary-hover: var(--steel-900);
 }
 
 [data-theme='dark'] {
   --bg-primary: var(--steel-950);
   --bg-neutral: var(--neutral-700);
+  --bg-btn-primary: var(--steel-900);
+  --bg-btn-primary-hover: var(--steel-200);
 }
