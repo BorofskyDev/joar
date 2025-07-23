@@ -42,6 +42,8 @@
 
 .default {
   @include breakpoint(md) {
-    max-width: #{px-to-rem(658)};
+    max-width: #{px-to-rem(458)};
+    padding: var(--p-10);
+    border: var(--border-1);
   }
 }
