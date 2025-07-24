@@ -1,0 +1,6 @@
+@use '@/styles/abstracts/mixins' as *;
+@use '@/styles/abstracts/functions' as *;
+
+.footer {
+    padding-inline: var(--p-x-page)
+}

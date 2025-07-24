@@ -3,6 +3,8 @@
   --bg-neutral: var(--neutral-300);
   --bg-btn-primary: var(--steel-200);
   --bg-btn-primary-hover: var(--steel-900);
+  --bg-btn-secondary: var(--stone-200);
+  --bg-btn-secondary-hover: var(--stone-700);
 }
 
 [data-theme='dark'] {
@@ -10,4 +12,7 @@
   --bg-neutral: var(--neutral-700);
   --bg-btn-primary: var(--steel-900);
   --bg-btn-primary-hover: var(--steel-200);
+
+  --bg-btn-secondary: var(--stone-800);
+  --bg-btn-secondary-hover: var(--stone-300);
 }

@@ -8,7 +8,8 @@
   z-index: 1000;
   max-width: var(--w-page-max);
   margin: 0 auto;
-  padding: var(--p-y-lg) var(--p-x-page);
+  padding-inline:  var(--p-x-page);
+  padding-top: var(--p-y-lg);
   background-color: var(--bg-primary);
   display: flex;
   align-items: center;

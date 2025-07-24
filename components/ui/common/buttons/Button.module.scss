@@ -13,4 +13,16 @@
       var(--bg-btn-primary-hover)
     );
   }
+
+  &--small {
+    @include button( 
+      var(--p-btn-sm),
+      var(--text-btn-primary),
+      var(--fs-300),
+      uppercase,
+      var(--text-btn-primary-hover),
+      var(--bg-btn-secondary),
+      var(--bg-btn-secondary-hover)
+    )
+  }
 }

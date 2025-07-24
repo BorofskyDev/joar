@@ -1,5 +1,5 @@
 export type ButtonProps = {
-  variant: 'primary' | 'secondary' | 'tertiary'
+  variant: 'primary' | 'secondary' | 'tertiary' | 'small'
   children: React.ReactNode
   type: 'button' | 'submit' | 'reset'
   onClick?: () => void

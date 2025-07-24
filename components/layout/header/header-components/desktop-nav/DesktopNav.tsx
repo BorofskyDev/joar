@@ -1,4 +1,4 @@
-import { TextLink } from '@/components/ui'
+import { Button, TextLink } from '@/components/ui'
 import { navLinks } from '../navLinks'
 import styles from './DesktopNav.module.scss'
 
@@ -14,6 +14,7 @@ export function DesktopNav({ className }: DesktopNavProps) {
           {link.label}
         </TextLink>
       ))}
+      <Button type='button' variant='small' className={styles.button}>Subscribe</Button>
     </nav>
   )
 }

@@ -9,7 +9,7 @@
         width: 100%;
         @include flex-center(row, var(--gap-el-sm));
         justify-content: space-between;
-        padding-bottom: var(--p-y-lg);
+        padding-bottom: var(--p-y-sm);
         border-bottom: var(--border-1);
     }
 }
