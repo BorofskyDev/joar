@@ -1,0 +1,17 @@
+@use '@/styles/abstracts/mixins' as *;
+@use '@/styles/abstracts/functions' as *;
+
+.postMeta {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: var(--gap-el-xs);
+
+    @include breakpoint(lg) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--gap-el-lg);
+    }
+
+    
+}

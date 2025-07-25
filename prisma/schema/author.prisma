@@ -1,0 +1,8 @@
+model Author {
+  id       String   @id @default(cuid())
+  name     String
+  image    String
+  link     String
+
+  posts    Post[]
+}

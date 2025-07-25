@@ -8,6 +8,7 @@ interface FormGroupProps {
   required?: boolean
   placeholder?: string
   value?: string
+  className?: string
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
@@ -20,9 +21,10 @@ export function FormGroup({
   placeholder,
   value,
   onChange,
+  className = '',
 }: FormGroupProps) {
   return (
-    <div className={styles.formGroup}>
+    <div className={`${styles.formGroup} ${className}`}>
       <label htmlFor={id} className={styles.label}>
         {label}
         {required && <span className={styles.required}>*</span>}
@@ -35,7 +37,7 @@ export function FormGroup({
         value={value}
         onChange={onChange}
         required={required}
-        className={styles.input}
+        className={`${styles.input} `}
       />
     </div>
   )
