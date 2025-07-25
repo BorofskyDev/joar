@@ -1,0 +1,35 @@
+@use '@/styles/abstracts/mixins' as *;
+@use '@/styles/abstracts/functions' as *;
+
+.formGroup {
+  @include flex-center(column, var(--p-4));
+
+  & > label {
+    font-size: var(--fs-200);
+    font-weight: var(--fw-light);
+  }
+
+  & .required {
+    color: var(--stroke-ruby);
+    font-weight: var(--fw-black);
+    font-size: var(--fs-300);
+  }
+
+  & > input {
+    width: 100%;
+    padding: var(--p-6) var(--p-10);
+    border: var(--border-1);
+    background: var(--bg-primary);
+
+    &::placeholder {
+      color: var(--text-secondary);
+      font-size: var(--fs-200);
+      font-weight: var(--fw-light);
+    }
+
+    &:focus {
+      border-color: var(--stroke-ruby);
+      box-shadow: 1px 1px 4px inset rgba(255, 0, 0, 0.3);
+    }
+  }
+}
