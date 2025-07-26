@@ -2,7 +2,9 @@
 
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
-import { loginWithEmail, loginWithGoogle } from '@/lib/'
+import { loginWithEmail, loginWithGoogle } from '@/lib/server/auth'
+import { auth } from '@/lib/server/firebase'
+import { setTokenCookie } from '@/lib/server/setTokenCookie'
 
 export function useLogin() {
   const router = useRouter()
@@ -14,6 +16,9 @@ export function useLogin() {
     setError(null)
     try {
       await loginWithEmail(email, password)
+      const user = auth.currentUser
+      if (user) await setTokenCookie(user)
+        
       router.push('/admin')
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'An error occurred')
@@ -27,6 +32,9 @@ export function useLogin() {
     setError(null)
     try {
       await loginWithGoogle()
+      const user = auth.currentUser
+      if (user) await setTokenCookie(user)
+
       router.push('/admin')
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'An error occurred')
