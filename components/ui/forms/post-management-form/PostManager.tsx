@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui'
 import { useCreatePost } from '@/lib'
 import { RichTextEditor } from '@/components/ui'
-import { PostMeta } from './post-management-components'
+import { PostImage, PostMeta } from './post-management-components'
 import styles from './PostManager.module.scss'
 
 interface PostManagerProps {
@@ -15,6 +15,9 @@ export function PostManager({ edit = false }: PostManagerProps) {
     title,
     slug,
     summary,
+    imageAlt,
+    image,
+    handleImageChange,
     content,
     handleInputChange,
     setContent,
@@ -30,6 +33,13 @@ export function PostManager({ edit = false }: PostManagerProps) {
         slug={slug}
         summary={summary}
         onChange={handleInputChange}
+      />
+
+      <PostImage
+        image={image}
+        alt={imageAlt}
+        onFileChange={handleImageChange}
+        onAltChange={handleInputChange}
       />
 
       <RichTextEditor value={content} onChange={setContent} />

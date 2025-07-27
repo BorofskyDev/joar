@@ -1,0 +1,9 @@
+@use '@/styles/abstracts/mixins' as *;
+@use '@/styles/abstracts/functions' as *;
+
+.toolbar {
+    @include flex-wrap(var(--gap-el-xs));
+    padding: var(--p-16);
+    border: var(--border-1);
+    background-color: var(--bg-secondary);
+}

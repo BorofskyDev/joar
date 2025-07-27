@@ -15,7 +15,8 @@
     font-size: var(--fs-300);
   }
 
-  & > input {
+  & > input,
+  & > textarea {
     width: 100%;
     padding: var(--p-6) var(--p-10);
     border: var(--border-1);

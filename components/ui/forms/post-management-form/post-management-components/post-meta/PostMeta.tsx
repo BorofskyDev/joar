@@ -13,6 +13,7 @@ interface PostMetaProps {
 }
 
 export function PostMeta({ title, slug, summary, onChange }: PostMetaProps) {
+  const SUMMARY_LIMIT = 280
   return (
     <div className={styles.postMeta}>
       <FormGroup
@@ -22,23 +23,26 @@ export function PostMeta({ title, slug, summary, onChange }: PostMetaProps) {
         label='Title'
         value={title}
         onChange={onChange}
+        className={styles.title}
         required
       />
-   <div className={styles.slug}>
-    <label htmlFor='slug' className={styles.slugLabel}>
-        Slug: 
-    </label>
-    <span className={styles.slugValue}>{slug || '-'}</span>
-   </div>
+      <div className={styles.slug}>
+        <label htmlFor='slug' className={styles.slugLabel}>
+          Slug:
+        </label>
+        <span className={styles.slugValue}>{slug || '-'}</span>
+      </div>
       <FormGroup
         id='summary'
         name='summary'
-        type='text'
-        label='Summary'
+        as='textarea'
+        label={`Summary (${summary.length}/${SUMMARY_LIMIT})`}
         value={summary}
+        maxLength={SUMMARY_LIMIT}
         onChange={onChange}
+        rows={4}
+        required 
         className={styles.summary}
-        required
       />
     </div>
   )

@@ -3,6 +3,8 @@
 import { EditorContent, useEditor } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import styles from './RichTextEditor.module.scss'
+import { EditorCanvas } from './editor-canvas/EditorCanvas'
+import { EditorToolbar } from './editor-toolbar/EditorToolbar'
 
 interface RichTextEditorProps {
   value: string | object
@@ -21,7 +23,8 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
 
   return (
     <div className={styles.editorWrapper}>
-      {editor && <EditorContent editor={editor} />}
+      <EditorToolbar editor={editor} />
+      {editor && <EditorCanvas editor={editor} />}
     </div>
   )
 }

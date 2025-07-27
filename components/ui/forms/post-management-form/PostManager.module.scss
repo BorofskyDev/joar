@@ -1,0 +1,8 @@
+@use '@/styles/abstracts/mixins' as *;
+@use '@/styles/abstracts/functions' as *;
+
+.postManager {
+    @include flex-center(column, var(--gap-section));
+    width: 100%;
+    padding-inline: var(--p-x-page);
+}

@@ -9,9 +9,34 @@
     gap: var(--gap-el-xs);
 
     @include breakpoint(lg) {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--gap-el-lg);
     }
 
+    @include breakpoint(xl) {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    & .title {
+        @include breakpoint(xl) {
+            grid-column: 1 / 4;
+        }
+    }
+
+    & .slug {
+        @include flex-center(column, var(--gap-el-sm));
+
+        @include breakpoint(xl) {
+            grid-column: 4 / 6; 
+        }
+    }
+
+    & .summary {
+        grid-column: 1 / -1;
+
+        @include breakpoint(xl) {
+            grid-column: 6 / -1;
+        }
+    }
     
 }

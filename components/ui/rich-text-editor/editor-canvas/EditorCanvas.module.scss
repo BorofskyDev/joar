@@ -1,0 +1,19 @@
+@use '@/styles/abstracts/mixins' as *;
+@use '@/styles/abstracts/functions' as *;
+
+.editorCanvas {
+    min-height: 25dvh;;
+    width: calc(100dvw - var(--p-x-page) * 2);
+    max-width: var(--w-page-max);
+    margin: 0 auto;
+    padding: var(--p-28);
+    border: var(--border-1);
+    background-color: var(--bg-secondary);
+
+    & > div:first-of-type {
+        min-height: 25dvh;
+        background-color: var(--bg-primary);
+        padding: var(--p-16);
+        border: var(--border-1);
+    }
+}
