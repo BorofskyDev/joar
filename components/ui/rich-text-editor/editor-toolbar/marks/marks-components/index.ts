@@ -1,1 +1,5 @@
 export * from './BoldMark'
+export * from './ItalicMark'
+export * from './LinkMark'
+export * from './StrikeMark'
+export * from './SuperScriptMark'

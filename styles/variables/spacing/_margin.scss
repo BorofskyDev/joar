@@ -4,6 +4,13 @@
 :root {
   --m-page-y: #{px-to-rem(32)};
 
+  --m-2: #{px-to-rem(2)};
+  --m-4: #{px-to-rem(4)};
+  --m-8: #{px-to-rem(8)};
+  --m-12: #{px-to-rem(12)};
+  --m-16: #{px-to-rem(16)};
+  --m-20: #{px-to-rem(20)};
+
   @include breakpoint(md) {
     --m-page-y: #{px-to-rem(48)};
   }

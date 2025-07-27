@@ -1,8 +1,8 @@
-// components/editor-toolbar/marks/MarksTB.tsx
+
 'use client'
 
 import { Editor } from '@tiptap/react'
-import { BoldMark } from './marks-components'
+import { BoldMark, ItalicMark, LinkMark, StrikeMark, SuperScriptMark } from './marks-components'
 
 interface MarksTBProps {
   editor: Editor | null
@@ -14,7 +14,10 @@ export function MarksTB({ editor }: MarksTBProps) {
   return (
     <>
       <BoldMark editor={editor} />
-      {/* Add ItalicMark, CodeMark, etc. here later */}
+      <ItalicMark editor={editor} />
+      <StrikeMark editor={editor} />
+      <LinkMark editor={editor} />
+      <SuperScriptMark editor={editor} />
     </>
   )
 }

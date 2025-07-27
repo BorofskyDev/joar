@@ -2,9 +2,20 @@
 @use '@/styles/abstracts/functions' as *;
 
 .toolbarBtn {
-    border: var(--border-1);
-    padding: var(--p-12);
+     @include button(
+      var(--p-10),
+      var(--text-primary),
+      var(--fs-400),
+      uppercase,
+      var(--text-btn-primary-hover),
+      var(--bg-primary),
+      var(--bg-btn-primary-hover)
+    );
     background-color: var(--bg-primary);
-    font-size: var(--fs-200);
+
+    &.active {
+        color: var(--text-btn-primary-hover);
+        background-color: var(--bg-btn-primary-hover)
+    }
 
 }
