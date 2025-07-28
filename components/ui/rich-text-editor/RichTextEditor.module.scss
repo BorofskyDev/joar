@@ -4,3 +4,7 @@
 .editorWrapper{
     @include flex-center(column, var(--gap-el-xl));
 }
+
+#toolbar-sentinel {
+    height: 1px;
+}

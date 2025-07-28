@@ -37,6 +37,7 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
 
   return (
     <div className={styles.editorWrapper}>
+      <div id='toolbar-sentinel' />
       <EditorToolbar editor={editor} />
       {editor && <EditorCanvas editor={editor} />}
     </div>

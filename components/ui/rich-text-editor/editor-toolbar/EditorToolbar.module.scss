@@ -2,8 +2,20 @@
 @use '@/styles/abstracts/functions' as *;
 
 .toolbar {
-    @include flex-wrap(var(--gap-el-xs));
-    padding: var(--p-16);
-    border: var(--border-1);
-    background-color: var(--bg-secondary);
+  @include flex-wrap(var(--gap-el-xs));
+  padding: var(--p-16);
+  border: var(--border-1);
+  background-color: var(--bg-secondary);
+  transition: var(--transition-main);
+  position: relative;
 }
+
+.sticky {
+  position: fixed;
+  top: 22%;
+//   left: 0;
+//   right: 0;
+  z-index: 10;
+  background: var(--bg-secondary);
+}
+
