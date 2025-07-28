@@ -1,7 +1,7 @@
 'use client'
 
 import { Editor } from '@tiptap/react'
-import { BQNode, BulletListNode } from './node-components'
+import { BQNode, BulletListNode, HeadingNode } from './node-components'
 
 interface NodesTBProps {
   editor: Editor | null
@@ -14,6 +14,7 @@ export function NodesTB({ editor }: NodesTBProps) {
     <>
      <BQNode editor={editor} />
      <BulletListNode editor={editor} />
+     <HeadingNode editor={editor} />
     </>
   )
 }

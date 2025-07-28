@@ -8,18 +8,26 @@
 
 @mixin heading-style($level) {
   @if $level == 1 {
-    @include heading(
-      var(--fs-900),
-      var(--fw-black),
-      var(--text-main),
-    );
+    @include heading(var(--fs-900), var(--fw-black), var(--text-main));
   }
 
   @if $level == 2 {
-    @include heading (
-        var(--fs-700),
-        var(--fw-bold),
-        var(--text-main),
-    )
+    @include heading(var(--fs-700), var(--fw-bold), var(--text-main));
+  }
+
+  @if $level == 3 {
+    @include heading(var(--fs-600), var(--fw-semibold), var(--text-main));
+  }
+
+  @if $level == 4 {
+    @include heading(var(--fs-500), var(--fw-medium), var(--text-main));
+  }
+
+  @if $level == 5 {
+    @include heading(var(--fs-400), var(--fw-medium), var(--text-main));
+  }
+
+  @if $level == 6 {
+    @include heading(var(--fs-300), var(--fw-normal), var(--text-secondary));
   }
 }

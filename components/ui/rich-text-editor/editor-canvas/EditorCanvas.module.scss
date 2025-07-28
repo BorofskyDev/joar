@@ -39,5 +39,55 @@
         font-weight: var(--fw-medium);
       }
     }
+
+    & > h2 {
+      @include heading-style(2);
+      width: fit-content;
+      margin: var(--m-12) auto;
+      text-align: center;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: var(--text-main);
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    & > h3 {
+      @include heading-style(3);
+      margin: var(--m-10) auto;
+    }
+
+    & > h4 {
+      @include heading-style(4);
+      margin: var(--m-8) auto;
+    }
+
+    & > h5 {
+      @include heading-style(5);
+      margin: var(--m-6) auto;
+    }
+
+    & > h6 {
+      @include heading-style(6);
+      margin: var(--m-4) auto;
+      font-style: italic;
+    }
+
+    & > figure[data-type='figure-image'] {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: var(--m-12) auto;
+
+      & > img {
+        max-width: 100%;
+      }
+    }
   }
 }

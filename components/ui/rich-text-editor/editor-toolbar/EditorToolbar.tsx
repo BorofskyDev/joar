@@ -4,6 +4,7 @@
 import { Editor } from '@tiptap/react'
 import { MarksTB } from './marks/MarksTB'
 import { NodesTB } from './nodes/NodesTB'
+import { CustomTB } from './custom/CustomTB'
 import styles from './EditorToolbar.module.scss'
 
 interface EditorToolbarProps {
@@ -17,7 +18,7 @@ export function EditorToolbar({ editor }: EditorToolbarProps) {
     <div className={styles.toolbar}>
       <MarksTB editor={editor} />
       <NodesTB editor={editor} />
-      {/* <CustomTB editor={editor} /> */}
+      <CustomTB editor={editor} />
     </div>
   )
 }

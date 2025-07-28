@@ -1,23 +1,19 @@
-// components/editor-toolbar/marks/BoldMark.tsx
 'use client'
 
 import { Editor } from '@tiptap/react'
-import styles from '../EditorToolbar.module.scss' // adjust if using per-group styles
+import { ImageInsert } from './ImageInsert'
 
-interface BoldMarkProps {
-  editor: Editor
+
+interface CustomTBProps {
+  editor: Editor | null
 }
 
-export function BoldMark({ editor }: BoldMarkProps) {
+export function CustomTB({ editor }: CustomTBProps) {
   if (!editor) return null
 
   return (
-    <button
-      type='button'
-      onClick={() => editor.chain().focus().toggleBold().run()}
-      className={editor.isActive('bold') ? styles.active : ''}
-    >
-      <strong>B</strong>
-    </button>
+    <>
+     <ImageInsert editor={editor} />
+    </>
   )
 }
