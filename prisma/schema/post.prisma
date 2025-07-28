@@ -1,20 +1,22 @@
 model Post {
-  id          String   @id @default(cuid())
+  id          String    @id @default(cuid())
   title       String
   summary     String
-  slug        String   @unique
+  slug        String    @unique
   imageUrl    String
   imageAlt    String?
-  featured    Boolean  @default(false)
-  content     Json     // TipTap content
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  featured    Boolean   @default(false)
+  content     Json // TipTap content
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  published   Boolean   @default(false)
+  publishedAt DateTime?
 
-  categoryId  String
-  category    Category @relation(fields: [categoryId], references: [id])
+  categoryId String
+  category   Category @relation(fields: [categoryId], references: [id])
 
-  authorId    String
-  author      Author   @relation(fields: [authorId], references: [id])
+  authorId String
+  author   Author @relation(fields: [authorId], references: [id])
 
-  tags        Tag[] 
+  tags Tag[]
 }

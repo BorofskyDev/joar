@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { generateSlug } from '@/lib/utils'
+import type { TipTapContent } from '@/lib/types'
 
 interface PostFields {
   title: string
@@ -22,7 +23,7 @@ export function useCreatePost() {
     imageAlt: '',
   })
 
-  const [content, setContent] = useState({ type: 'doc', content: [] }) // TipTap JSON
+  const [content, setContent] = useState<TipTapContent>({ type: 'doc', content: [] }) // TipTap JSON
   const [image, setImage] = useState<File | null>(null)
 
  const handleInputChange = (

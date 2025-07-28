@@ -4,7 +4,8 @@
 .editorCanvas {
   min-height: 25dvh;
   width: calc(100dvw - var(--p-x-page) * 2);
-  max-width: var(--w-page-max);
+  
+  max-width: #{px-to-ch(800)};
   margin: 0 auto;
   padding: var(--p-28);
   border: var(--border-1);

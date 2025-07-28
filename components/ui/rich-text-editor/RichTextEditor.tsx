@@ -9,10 +9,11 @@ import { EditorToolbar } from './editor-toolbar/EditorToolbar'
 import Blockquote from '@tiptap/extension-blockquote'
 import Heading from '@tiptap/extension-heading'
 import { FigureImage } from '@/lib'
+import { TipTapContent } from '@/lib/types'
 
 interface RichTextEditorProps {
   value: string | object
-  onChange: (content: object) => void
+  onChange: React.Dispatch<React.SetStateAction<TipTapContent>>
 }
 
 export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
