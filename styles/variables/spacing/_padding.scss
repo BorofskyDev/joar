@@ -21,6 +21,7 @@
 
 
   --p-btn-lg: #{px-to-rem(8)} #{px-to-rem(18)};
+  --p-btn-md: #{px-to-rem(6)} #{px-to-rem(14)};
   --p-btn-sm: #{px-to-rem(4)} #{px-to-rem(10)};
 
   @include breakpoint(md) {
@@ -29,6 +30,7 @@
     --p-y-lg: #{px-to-rem(32)};
 
     --p-btn-lg: #{px-to-rem(10)} #{px-to-rem(20)};
+    --p-btn-md: #{px-to-rem(8)} #{px-to-rem(16)};
     --p-btn-sm: #{px-to-rem(6)} #{px-to-rem(12)};
   }
 
@@ -38,6 +40,7 @@
     --p-y-lg: #{px-to-rem(40)};
 
     --p-btn-lg: #{px-to-rem(12)} #{px-to-rem(24)};
+    --p-btn-md: #{px-to-rem(10)} #{px-to-rem(20)};
     --p-btn-sm: #{px-to-rem(8)} #{px-to-rem(16)};
   }
 

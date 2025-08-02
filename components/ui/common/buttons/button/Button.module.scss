@@ -18,11 +18,24 @@
     @include button( 
       var(--p-btn-sm),
       var(--text-btn-primary),
-      var(--fs-300),
+      var(--fs-200),
       uppercase,
       var(--text-btn-primary-hover),
       var(--bg-btn-secondary),
       var(--bg-btn-secondary-hover)
     )
+  }
+
+  &--secondary {
+    @include button(
+      var(--p-btn-md),
+      var(--text-btn-secondary),
+      var(--fs-300),
+      uppercase,
+      var(--text-btn-secondary-hover),
+      var(--bg-btn-secondary),
+      var(--bg-btn-secondary-hover),
+      var(--border-1-secondary),
+    );
   }
 }

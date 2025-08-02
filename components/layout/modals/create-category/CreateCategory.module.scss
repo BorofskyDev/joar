@@ -1,0 +1,26 @@
+@use '@/styles/abstracts/mixins' as *;
+@use '@/styles/abstracts/functions' as *;
+
+.dialogRoot {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    padding: var(--p-28);
+    border: var(--border-1);
+    background-color: var(--bg-secondary);
+    z-index: 1000;
+
+    .panel {
+        @include flex-center(column, var(--gap-el-lg));
+    }
+
+    .form {
+        @include flex-center(column, var(--gap-el-md));
+    }
+
+    .actions {
+        @include flex-center(row, var(--gap-el-sm));
+    }
+}

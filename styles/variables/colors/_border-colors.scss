@@ -1,7 +1,9 @@
 :root {
     --border-main: var(--blue-600);
+    --border-secondary: var(--ruby-600);
 }
 
 [data-theme='dark'] {
     --border-main: var(--emerald-400);
+    --border-secondary: var(--purple-400);
 }

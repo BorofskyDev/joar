@@ -4,8 +4,8 @@
   --bg-neutral: var(--neutral-300);
   --bg-btn-primary: var(--steel-200);
   --bg-btn-primary-hover: var(--steel-900);
-  --bg-btn-secondary: var(--stone-200);
-  --bg-btn-secondary-hover: var(--stone-700);
+  --bg-btn-secondary: var(--ruby-100);
+  --bg-btn-secondary-hover: var(--ruby-700);
 }
 
 [data-theme='dark'] {
@@ -15,6 +15,6 @@
   --bg-btn-primary: var(--steel-900);
   --bg-btn-primary-hover: var(--steel-200);
 
-  --bg-btn-secondary: var(--stone-800);
-  --bg-btn-secondary-hover: var(--stone-300);
+  --bg-btn-secondary: var(--purple-800);
+  --bg-btn-secondary-hover: var(--purple-300);
 }

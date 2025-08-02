@@ -1,7 +1,8 @@
 model Category {
-  id     String   @id @default(cuid())
-  name   String
-  slug   String   @unique
+  id          String @id @default(cuid())
+  name        String
+  description String
+  slug        String @unique
 
-  posts  Post[]
+  posts Post[]
 }

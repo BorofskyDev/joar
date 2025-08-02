@@ -3,4 +3,5 @@
 
 :root {
   --border-1: #{px-to-rem(1)} solid var(--border-main);
+  --border-1-secondary: #{px-to-rem(1)} solid var(--border-secondary);
 }

@@ -7,11 +7,12 @@
   $text-transform,
   $color-hover,
   $bg-color,
-  $bg-color-hover
+  $bg-color-hover,
+  $border: var(--border-1),
 ) {
   position: relative;
   padding: $padding;
-  border: var(--border-1);
+  border: $border;
   font-family: var(--font-atkinson-mono);
   color: $color;
   font-size: $font-size;

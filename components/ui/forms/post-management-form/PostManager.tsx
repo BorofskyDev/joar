@@ -5,6 +5,7 @@ import { useCreatePost } from '@/lib'
 import { RichTextEditor } from '@/components/ui'
 import { PostImage, PostMeta } from './post-management-components'
 import styles from './PostManager.module.scss'
+import { CreateCategory} from '@/components/layout'
 
 interface PostManagerProps {
   edit?: boolean // default = false
@@ -43,6 +44,8 @@ export function PostManager({ edit = false }: PostManagerProps) {
       />
 
       <RichTextEditor value={content} onChange={setContent} />
+
+      <CreateCategory/>
 
       <Button type='submit' variant='primary' disabled={loading}>
         {loading
